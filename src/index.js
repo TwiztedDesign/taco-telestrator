@@ -1,9 +1,8 @@
-let taco = window.taco;
-
+import Telestrator from './telestrator';
 
 /********* To define new taco element ******************/
-// taco.define(name, element);
+window.taco.define('taco-telestrator', Telestrator);
 
 /********* To extend taco with new functions ***********/
-// taco.extend(api-name, object with functions);
+// window.taco.extend(api-name, object with functions);
 
