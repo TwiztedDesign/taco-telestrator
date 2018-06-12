@@ -135,6 +135,7 @@ var Telestrator = function (_HTMLElement) {
                 self.resizeCanvas();
             });
             this.resizeCanvas();
+            this.on();
         }
     }, {
         key: 'disconnectedCallback',
@@ -164,6 +165,23 @@ var Telestrator = function (_HTMLElement) {
                 tc._a = 1;
             }
             return tc.toString();
+        }
+    }, {
+        key: 'on',
+        value: function on() {
+            this.canvas.style.display = 'block';
+            // window.taco.gesture.off('swipe');
+        }
+    }, {
+        key: 'off',
+        value: function off() {
+            this.canvas.style.display = 'none';
+            // window.taco.gesture.on('swipe');
+        }
+    }, {
+        key: 'clear',
+        value: function clear() {
+            this.signaturePad.clear();
         }
     }, {
         key: 'expose',

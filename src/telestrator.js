@@ -24,6 +24,7 @@ export default class Telestrator extends HTMLElement {
         let self = this;
         window.addEventListener("resize", function(){self.resizeCanvas();});
         this.resizeCanvas();
+        this.on();
     }
 
     disconnectedCallback() {
@@ -77,11 +78,26 @@ export default class Telestrator extends HTMLElement {
         this.signaturePad.maxWidth = value + (value * this.velocityMagnitude);
     }
 
+    on(){
+        this.canvas.style.display = 'block';
+        // window.taco.gesture.off('swipe');
+    }
+
+    off(){
+        this.canvas.style.display = 'none';
+        // window.taco.gesture.on('swipe');
+    }
+    clear(){
+        this.signaturePad.clear();
+    }
+
     expose(){
         return {
             Color   : 'color',
             Size    : 'size'
         };
     }
+
+
 
 }
