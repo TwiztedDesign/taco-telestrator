@@ -184,6 +184,15 @@ var Telestrator = function (_HTMLElement) {
             this.signaturePad.clear();
         }
     }, {
+        key: 'undo',
+        value: function undo() {
+            var data = this.signaturePad.toData();
+            if (data) {
+                data.pop(); // remove the last dot or line
+                this.signaturePad.fromData(data);
+            }
+        }
+    }, {
         key: 'expose',
         value: function expose() {
             return {
