@@ -90,6 +90,13 @@ export default class Telestrator extends HTMLElement {
     clear(){
         this.signaturePad.clear();
     }
+    undo(){
+        var data = this.signaturePad.toData();
+        if (data) {
+            data.pop(); // remove the last dot or line
+            this.signaturePad.fromData(data);
+        }
+    }
 
     expose(){
         return {
