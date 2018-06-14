@@ -136,6 +136,16 @@ var Telestrator = function (_HTMLElement) {
             });
             this.resizeCanvas();
             this.on();
+
+            this.canvas.addEventListener('mousemove', function (e) {
+                e.stopPropagation();
+            });
+            this.canvas.addEventListener('mouseup', function (e) {
+                e.stopPropagation();
+            });
+            this.canvas.addEventListener('mousedown', function (e) {
+                e.stopPropagation();
+            });
         }
     }, {
         key: 'disconnectedCallback',
