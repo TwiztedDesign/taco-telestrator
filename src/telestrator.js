@@ -26,9 +26,13 @@ export default class Telestrator extends HTMLElement {
         this.resizeCanvas();
         this.on();
 
-        this.canvas.addEventListener('mousemove', function(e){e.stopPropagation();});
-        this.canvas.addEventListener('mouseup', function(e){e.stopPropagation();});
-        this.canvas.addEventListener('mousedown', function(e){e.stopPropagation();});
+        this.canvas.addEventListener('mousemove', function(e){e.stopPropagation();}, false);
+        // this.canvas.addEventListener('mouseup', function(e){e.stopPropagation();}, false);
+        this.canvas.addEventListener('mousedown', function(e){e.stopPropagation();}, false);
+
+        document.body.addEventListener('mousedown', function(){console.log('mousedown');});
+        document.body.addEventListener('mouseup', function(){console.log('mouseup');});
+        document.body.addEventListener('mousemove', function(){console.log('mousemove');});
     }
 
     disconnectedCallback() {
