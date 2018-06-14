@@ -145,15 +145,9 @@ var Telestrator = function (_HTMLElement) {
                 e.stopPropagation();
             }, false);
 
-            document.body.addEventListener('mousedown', function () {
-                console.log('mousedown');
-            });
-            document.body.addEventListener('mouseup', function () {
-                console.log('mouseup');
-            });
-            document.body.addEventListener('mousemove', function () {
-                console.log('mousemove');
-            });
+            // document.body.addEventListener('mousedown', function(){console.log('mousedown');});
+            // document.body.addEventListener('mouseup', function(){console.log('mouseup');});
+            // document.body.addEventListener('mousemove', function(){console.log('mousemove');});
         }
     }, {
         key: 'disconnectedCallback',
