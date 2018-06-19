@@ -181,14 +181,14 @@ var Telestrator = function (_HTMLElement) {
     }, {
         key: 'on',
         value: function on() {
-            this.canvas.style.display = 'block';
-            // window.taco.gesture.off('swipe');
+            // this.signaturePad.on();
+            this.style['pointer-events'] = 'auto';
         }
     }, {
         key: 'off',
         value: function off() {
-            this.canvas.style.display = 'none';
-            // window.taco.gesture.on('swipe');
+            // this.signaturePad.off();
+            this.style['pointer-events'] = 'none';
         }
     }, {
         key: 'clear',
